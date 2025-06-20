@@ -11397,6 +11397,25 @@ components:
           type: string
           description: The consumer's email address
           example: john.doe@alviere.com
+        occupation:
+          type: object
+          required:
+            - employment_status
+          properties:
+            employment_status:
+              type: string
+              description: The current work status of the consumer, indicating their engagement in the workforce
+              enum:
+                - FULL_TIME
+                - PART_TIME
+                - SELF_EMPLOYED
+                - FREELANCER
+                - UNEMPLOYED
+                - STUDENT
+                - RETIRED
+            profession:
+              type: string
+              description: This field represents the consumer's core professional identity and is required unless the employment_status is 'STUDENT' or 'UNEMPLOYED'. Please consult our guides for valid values for your Program.
     business-information:
       title: Business information
       description: This structure contains the information of a business account.
@@ -11843,6 +11862,25 @@ components:
           type: string
           description: The consumer's email address
           example: john.doe@alviere.com
+        occupation:
+          type: object
+          required:
+            - employment_status
+          properties:
+            employment_status:
+              type: string
+              description: The current work status of the consumer, indicating their engagement in the workforce
+              enum:
+                - FULL_TIME
+                - PART_TIME
+                - SELF_EMPLOYED
+                - FREELANCER
+                - UNEMPLOYED
+                - STUDENT
+                - RETIRED
+            profession:
+              type: string
+              description: This field represents the consumer's core professional identity and is required unless the employment_status is 'STUDENT' or 'UNEMPLOYED'. Please consult our guides for valid values for your Program.
     stakeholder-information-request:
       title: Stakeholder
       type: object
